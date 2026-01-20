@@ -1,14 +1,27 @@
 streamlit
+
+# LangChain stack
 langchain==0.2.10
 langchain-core==0.2.27
 langchain-community==0.2.10
 langchain-text-splitters==0.2.2
 langchain-google-genai==1.0.6
+
+# Vector DB
 faiss-cpu
+
+# YouTube
 youtube-transcript-api
+
+# Env + PDF
 python-dotenv
 reportlab
-sentence-transformers
+
+# Embeddings (PINNED)
+sentence-transformers==2.6.1
+transformers==4.37.2
+
+# Torch (CPU, stable)
 torch==2.1.2
 torchvision==0.16.2
 torchaudio==2.1.2
