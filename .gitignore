@@ -1,0 +1,5 @@
+ragenv/
+__pycache__/
+faiss_index/
+.env
+*.pyc

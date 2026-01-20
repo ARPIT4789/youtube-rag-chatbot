@@ -1,0 +1,15 @@
+streamlit
+langchain==0.2.10
+langchain-core==0.2.27
+langchain-community==0.2.10
+langchain-text-splitters==0.2.2
+langchain-google-genai==1.0.6
+faiss-cpu
+youtube-transcript-api
+python-dotenv
+reportlab
+sentence-transformers
+torch==2.1.2
+torchvision==0.16.2
+torchaudio==2.1.2
+
