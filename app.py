@@ -2,7 +2,7 @@ import streamlit as st
 import os
 from ingest import ingest
 from chatbot import load_qa_chain
-from pdf_export import export_chat_to_pdf
+from pdf_export import generate_pdf_bytes
 
 st.set_page_config(page_title="YouTube Multilingual Chatbot", layout="wide")
 
@@ -69,7 +69,13 @@ if user_question:
 st.divider()
 
 # PDF Export
-if st.button("📄 Export Notes"):
-    file_path = export_chat_to_pdf(st.session_state.messages)
-    st.success(f"Notes saved to: {file_path}")
 
+if st.button("📄 Export Notes as PDF"):
+    pdf_buffer = generate_pdf_bytes(st.session_state.messages)
+
+    st.download_button(
+        label="⬇️ Download PDF",
+        data=pdf_buffer,
+        file_name="youtube_notes.pdf",
+        mime="application/pdf"
+    )
